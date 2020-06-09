@@ -68,7 +68,8 @@
           для вашего бизнеса
         </h1>
         
-        <a class="hero-button" href="">Заказать услугу</a>
+<button class="hero-button" data-modal-open>Заказать услугу</button>
+        
       </section>
 
       <section class="section">
@@ -473,19 +474,49 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       
-      <div class="modal modal-button">
-        <button class="m-button">
+      <div class="modal">
+        <button class="m-button" data-modal-close>
           <svg width="11px" height="11px">
             <use href="./images/symbol-defs1.svg#icon-Vector"></use>
           </svg>
         </button>
+<h2 class="modal-paragraph">Оставьте свои данные, мы вам перезвоним</h3>
+        <form class="form">
+          
+          <div class="form-field">
+            <label for="name">Имя</label>
+            <input class="form-input" type="text" name="name" id="name">
+          </div>
+          
+<div class="form-field">
+  <label for="tel" class="form-label">Телефое</label>
+  <input class="form-input" type="tel" name="tel" id="tel">
+</div>
+          
+<div class="form-field">
+  <label for="mail" class="form-label">Почта</label>
+  <input class="form-input" type="email" name="mail" id="mail">
+</div>
+
+
+<div class="form-field">
+  <label for="comment" class="form-label">Комментарий</label>
+  <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+</div>
+          
+
+          <button type="submit">Отправить</button>
+
+
+        </form>
         
 
       </div>
     
     
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
